@@ -1,27 +1,24 @@
-# vite-template-redux
-
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
+# Запуск
 
 ```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+npm install
 ```
+```sh
+npm run dev
+```
+## Сделано полностью или частично
+- должен быть адаптирован под мобильные устройства и планшеты
+- наполнение контентом отзывов из html обернутого в json
+- наполнение контентом товары по апи
+    - показывать первую страницу сразу
+    - остальные страницы подгружать ajax запросом, по мере прокрутки вниз
+- при нажатии на кнопку "купить", она должна меняться на кнопки + и - и поле для ввода кол-ва товара, значение поля должно быть 1, кнопки должны добавлять отбавлять товар, так же должна быть возможность вписать в поле для ввода любое кол-во.
+- при изменении кол-ва какого-либо из товаров должна меняться информация в корзине (та что над полем с телефоном)
+- маска в поле для телефона
+- при нажатии кнопки "заказать" идет проверка того что телефон полностью введен
+    - если всё хорошо - отправлять запрос на сервер
+    - если есть ошибки - подсветить соответствующие поля красным (поле номера телефона)
+- после отправки запроса и получения ответа от сервера отобразить попап что всё успешно (Не хватило впемени на попап, выел информацию в alert)
 
-## Goals
-
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
-
-## Scripts
-
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
-
-## Inspiration
-
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+- проявлении инициативы по улучшению ux на месте. например добавить прилоадеры пока грузится контент.
+- отказоустойчивость. например пофиксить xss атаку через контент отзывов, учесть возможность того что название товара может быть длиннее чем в дизайне. (если здесь речь про отзывы и тег script внутри - это сделал)
