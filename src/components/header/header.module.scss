@@ -1,0 +1,16 @@
+.header {
+    width: 86vw;
+    max-width: 1442px;
+    margin: 0 auto 105px;
+    padding: 8px 74px;
+    text-align: center;
+    font-size: 96px;
+    border-radius: 15px;
+    background-color: #777;
+    
+    @media (max-width: 1340px) {
+        margin-bottom: 90px;
+        padding: 8px 16px;
+        font-size: 40px;
+    }
+}

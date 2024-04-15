@@ -1,0 +1,41 @@
+.reviews {
+  display: flex;
+  gap: 34px;
+  margin: 0 auto 243px;
+  max-width: 970px;
+  text-align: left;
+
+  @media (max-width: 1340px) {
+    gap: 22px;
+    margin-bottom: 120px;
+  }
+
+  @media (max-width: 1340px) {
+    flex-direction: column;
+  }
+}
+
+.review {
+  width: calc((100% - 34px) / 2);
+  padding: 20px 27px 50px;
+  border-radius: 15px;
+  background-color: var(--color-accent);
+  color: #000;
+  font-size: 24px;
+
+  @media (max-width: 1340px) {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  > * {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
